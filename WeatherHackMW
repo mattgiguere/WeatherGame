@@ -1,0 +1,17 @@
+<VirtualHost *:80>
+		ServerName 107.170.138.228
+		ServerAdmin admin@107.170.138.228
+		WSGIScriptAlias / /var/www/WeatherHackMW/weatherhackmw.wsgi
+		<Directory /var/www/WeatherHackMW/WeatherHackMW/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		Alias /static /var/www/WeatherHackMW/WeatherHackMW/static
+		<Directory /var/www/WeatherHackMW/WeatherHackMW/static/>
+			Order allow,deny
+			Allow from all
+		</Directory>
+		ErrorLog ${APACHE_LOG_DIR}/error.log
+		LogLevel warn
+		CustomLog ${APACHE_LOG_DIR}/access.log combined
+</VirtualHost>
