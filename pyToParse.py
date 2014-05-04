@@ -25,8 +25,8 @@ print "https://parse.com/apps/new"
 printExplain("Change the values below to the ones supplied by Parse for your application")
 # Are in the 'settings' tab of each app
 
-APPLICATION_ID = "APPLICATION_ID_HERE"
-REST_API_KEY = "REST_API_KEY_HERE"
+APPLICATION_ID = "aOmfYWxfdaqrD9aMOtp7a3UinrfOAqNMyVxIjLzm"
+REST_API_KEY = "AkHGq6xQCd67e8Tj9xcXY3PirvzZstur7DBaURuX"
 
 if APPLICATION_ID == "APPLICATION_ID_HERE":
     printTitle("You need to create a parse app and supply the auth values")
