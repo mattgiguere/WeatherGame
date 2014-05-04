@@ -3,6 +3,19 @@ from flask import Flask, jsonify, abort, make_response, request
 
 middleware = Flask(__name__)
 
+import SimpleHTTPServer
+
+class MyHTTPRequestHandler(SimpleHTTPServer.SimpleHTTPRequestHandler):
+    def end_headers(self):
+        self.send_my_headers()
+
+        SimpleHTTPServer.SimpleHTTPRequestHandler.end_headers(self)
+
+    def send_my_headers(self):
+        self.send_header("Access-Control-Allow-Origin", "*")
+
+SimpleHTTPServer.test(HandlerClass=MyHTTPRequestHandler)
+
 questions = [
     {
         'question_id': 1,
